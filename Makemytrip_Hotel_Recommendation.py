@@ -16,6 +16,7 @@ random.seed(42)
 # Read the sample from the dataset
 df = pd.read_csv(file_path, skiprows=lambda i: i > 0 and random.random() > (sample_size / 30000),on_bad_lines='skip')
 
+print("my name")
 # filling missing values in Hotel Details with "Not Available"
 df["Hotel Details"].fillna("Not Available", inplace = True)
 
